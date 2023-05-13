@@ -1,0 +1,13 @@
+version: '3'
+services:
+  de-final-prj:
+    image: sindb/de-final-prj:latest
+    ports:
+      - "8998:8998"
+      - "8280:8280"
+      - "15432:5432"
+    container_name: de-final-prj-local
+    volumes:
+      - ./src:/lessons
+    restart: always
+    
